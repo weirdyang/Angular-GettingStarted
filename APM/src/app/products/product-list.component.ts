@@ -7,7 +7,8 @@ import { IProduct } from './product'
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-    pageTitle: string = 'Product List';
+    private TITLE: string = 'Product List'
+    pageTitle: string = this.TITLE;
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
@@ -55,5 +56,8 @@ export class ProductListComponent implements OnInit {
         return this.products.filter((product: IProduct) =>
             product.productName.toLowerCase().includes(filter)
         );
+    }
+    onRatingClicked(message: string): void {
+        this.pageTitle = `${this.TITLE} - Rating ${message}`
     }
 }
