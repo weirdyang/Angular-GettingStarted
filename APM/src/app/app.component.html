@@ -1,10 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{pageTitle}}!!
-  </h1>
-  ... Starter Files ...
-  <section>
-    <pm-products></pm-products>
-  </section>
-</div>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a href=""
+     class="navbar-brand"></a>
+  <ul class="nav nav-pills">
+    <li><a class="nav-link"
+         [routerLink]="['/welcome']">Home </a></li>
+    <li><a class="nav-link"
+         [routerLink]="['/products']">Product List </a></li>
+  </ul>
+</nav>
+<section id="router-container"
+         class="container">
+  <router-outlet>
+
+  </router-outlet>
+</section>
